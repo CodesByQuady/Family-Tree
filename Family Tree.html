@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<title>Family Tree</title>
+</head>
+<body>
+<h1>This shows how to change and mess with arrays</h1>
+<p id="boys"></p>
+<p id="girls"></p>
+</body>
+<style>
+h1{text-align : center
+</style>
+<script>
+var boys = [];
+var girls = [];
+function childrenList(){
+	while(true){
+		var kid = prompt('Enter name of your children, one by one. Press enter to stop');
+		if(kid == ""){
+			// Prints the list within the <p> tags
+			document.getElementById('boys').innerHTML = "Here are the boys: " + boys;
+			document.getElementById('girls').innerHTML = "Here are the girls: " + girls;
+			break;
+		}
+		else{
+			// Choose which gender the child is.
+			var gender = prompt('Is your child a boy or a girl?');
+			if(gender == 'boy'){
+				boys.push(kid);
+				continue;
+			}
+			else if(gender == 'girl'){
+				girls.push(kid);
+				continue;
+			}
+			else {
+				alert('Error, returning to name database.');
+				continue;
+			}
+		}
+	}
+}
+childrenList();
+</script>
+</html>
+
+				
